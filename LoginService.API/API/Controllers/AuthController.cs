@@ -1,6 +1,9 @@
 ﻿using LoginService.API.Application.Services;
-using Microsoft.AspNetCore.Identity.Data;
+using LoginService.API.API.Models;
 using Microsoft.AspNetCore.Mvc;
+using LoginService.API.Domain.Interfaces;
+
+
 
 namespace LoginService.API.API.Controllers
 {

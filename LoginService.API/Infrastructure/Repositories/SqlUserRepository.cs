@@ -12,9 +12,10 @@ namespace LoginService.API.Infrastructure.Repositories
         private readonly LoginDbContext _context;
         public SqlUserRepository(LoginDbContext context) => _context = context;
 
-        public async Task<User> GetByUsernameAsync(string username)
+        public async Task<User?> GetByUsernameAsync(string username)
         {
             return await _context.Users.FirstOrDefaultAsync(u => u.Username == username);
         }
+
     }
 }

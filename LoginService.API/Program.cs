@@ -1,5 +1,9 @@
 using LoginService.API.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
+using LoginService.API.Domain.Interfaces;
+using LoginService.API.Application.Services;
+using LoginService.API.Infrastructure.Repositories;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
