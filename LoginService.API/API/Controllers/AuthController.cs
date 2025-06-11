@@ -21,7 +21,10 @@ namespace LoginService.API.API.Controllers
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginRequest request)
         {
+            Console.WriteLine($"[API] Petición recibida: '{request.Username}' / '{request.Password}'");
+
             var user = await _authService.ValidateLogin(request.Username, request.Password);
+
             if (user == null) return Unauthorized("Credenciales inválidas");
 
             return Ok(new { message = "Login exitoso", username = user.Username });
